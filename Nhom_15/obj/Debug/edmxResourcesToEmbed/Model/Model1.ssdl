@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QuanLyMusicModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Music">
+    <Key>
+      <PropertyRef Name="IdProduct" />
+    </Key>
+    <Property Name="IdProduct" Type="int" Nullable="false" />
+    <Property Name="TenProduct" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Gia" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Image" Type="nvarchar" MaxLength="255" />
+    <Property Name="Source" Type="nvarchar" MaxLength="255" />
+    <Property Name="TheLoaiId" Type="int" />
+  </EntityType>
+  <EntityType Name="MusicYour">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenDangNhap" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="IdProduct" Type="int" Nullable="false" />
+    <Property Name="NgayMua" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TaiKhoan">
+    <Key>
+      <PropertyRef Name="TenDangNhap" />
+    </Key>
+    <Property Name="TenDangNhap" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TenHienThi" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="MatKhau" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TheLoai">
+    <Key>
+      <PropertyRef Name="TheLoaiId" />
+    </Key>
+    <Property Name="TheLoaiId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenTheLoai" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__MusicYour__IdPro__3F466844">
+    <End Role="Music" Type="Self.Music" Multiplicity="1" />
+    <End Role="MusicYour" Type="Self.MusicYour" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Music">
+        <PropertyRef Name="IdProduct" />
+      </Principal>
+      <Dependent Role="MusicYour">
+        <PropertyRef Name="IdProduct" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MusicYour__TenDa__3E52440B">
+    <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="1" />
+    <End Role="MusicYour" Type="Self.MusicYour" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TaiKhoan">
+        <PropertyRef Name="TenDangNhap" />
+      </Principal>
+      <Dependent Role="MusicYour">
+        <PropertyRef Name="TenDangNhap" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Music_TheLoai">
+    <End Role="TheLoai" Type="Self.TheLoai" Multiplicity="0..1" />
+    <End Role="Music" Type="Self.Music" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TheLoai">
+        <PropertyRef Name="TheLoaiId" />
+      </Principal>
+      <Dependent Role="Music">
+        <PropertyRef Name="TheLoaiId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="QuanLyMusicModelStoreContainer">
+    <EntitySet Name="Music" EntityType="Self.Music" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MusicYour" EntityType="Self.MusicYour" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TaiKhoan" EntityType="Self.TaiKhoan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TheLoai" EntityType="Self.TheLoai" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__MusicYour__IdPro__3F466844" Association="Self.FK__MusicYour__IdPro__3F466844">
+      <End Role="Music" EntitySet="Music" />
+      <End Role="MusicYour" EntitySet="MusicYour" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MusicYour__TenDa__3E52440B" Association="Self.FK__MusicYour__TenDa__3E52440B">
+      <End Role="TaiKhoan" EntitySet="TaiKhoan" />
+      <End Role="MusicYour" EntitySet="MusicYour" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Music_TheLoai" Association="Self.FK_Music_TheLoai">
+      <End Role="TheLoai" EntitySet="TheLoai" />
+      <End Role="Music" EntitySet="Music" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,178 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style x:Key="HomeBtnStyle" TargetType="Button">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border" Background="{TemplateBinding Background}">
+                        <StackPanel Orientation="Horizontal">
+                            <Image x:Name="image" Source="Img/power.png" HorizontalAlignment="Center" VerticalAlignment="Center" Height="25"/>
+                            <TextBlock x:Name="text" Text="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" Margin="10 0 0 0"/>
+                        </StackPanel>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="text" Property="Foreground" Value="#de3957"/>
+                            <Setter TargetName="image" Property="Source" Value="/Img/home_sel.png"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="False">
+                            <Setter TargetName="text" Property="Foreground" Value="White"/>
+                            <Setter TargetName="image" Property="Source" Value="/Img/home_def.png"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="CategoryBtnStyle" TargetType="Button">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border" Background="{TemplateBinding Background}">
+                        <StackPanel Orientation="Horizontal">
+                            <Image x:Name="image" Source="Img/power.png" HorizontalAlignment="Center" VerticalAlignment="Center" Height="25"/>
+                            <TextBlock x:Name="text" Text="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" Margin="10 0 0 0"/>
+                        </StackPanel>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="text" Property="Foreground" Value="#de3957"/>
+                            <Setter TargetName="image" Property="Source" Value="/Img/category_sel.png"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="False">
+                            <Setter TargetName="text" Property="Foreground" Value="White"/>
+                            <Setter TargetName="image" Property="Source" Value="/Img/category_def.png"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="DownloadBtnStyle" TargetType="Button">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border" Background="{TemplateBinding Background}">
+                        <StackPanel Orientation="Horizontal">
+                            <Image x:Name="image" Source="Img/power.png" HorizontalAlignment="Center" VerticalAlignment="Center" Height="25"/>
+                            <TextBlock x:Name="text" Text="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" Margin="10 0 0 0"/>
+                        </StackPanel>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="text" Property="Foreground" Value="#de3957"/>
+                            <Setter TargetName="image" Property="Source" Value="/Img/download_sel.png"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="False">
+                            <Setter TargetName="text" Property="Foreground" Value="White"/>
+                            <Setter TargetName="image" Property="Source" Value="/Img/download_def.png"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="FriendsBtnStyle" TargetType="Button">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border" Background="{TemplateBinding Background}">
+                        <StackPanel Orientation="Horizontal">
+                            <Image x:Name="image" Source="Img/power.png" HorizontalAlignment="Center" VerticalAlignment="Center" Height="25"/>
+                            <TextBlock x:Name="text" Text="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" Margin="10 0 0 0"/>
+                        </StackPanel>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="text" Property="Foreground" Value="#de3957"/>
+                            <Setter TargetName="image" Property="Source" Value="/Img/friends_sel.png"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="False">
+                            <Setter TargetName="text" Property="Foreground" Value="White"/>
+                            <Setter TargetName="image" Property="Source" Value="/Img/friends_def.png"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="LibraryBtnStyle" TargetType="Button">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border" Background="{TemplateBinding Background}">
+                        <StackPanel Orientation="Horizontal">
+                            <Image x:Name="image" Source="Img/power.png" HorizontalAlignment="Center" VerticalAlignment="Center" Height="25"/>
+                            <TextBlock x:Name="text" Text="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" Margin="10 0 0 0"/>
+                        </StackPanel>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="text" Property="Foreground" Value="#de3957"/>
+                            <Setter TargetName="image" Property="Source" Value="/Img/lib_sel.png"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="False">
+                            <Setter TargetName="text" Property="Foreground" Value="White"/>
+                            <Setter TargetName="image" Property="Source" Value="/Img/lib_def.png"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="FavoritBtnStyle" TargetType="Button">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border" Background="{TemplateBinding Background}">
+                        <StackPanel Orientation="Horizontal">
+                            <Image x:Name="image" Source="Img/power.png" HorizontalAlignment="Center" VerticalAlignment="Center" Height="25"/>
+                            <TextBlock x:Name="text" Text="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" Margin="10 0 0 0"/>
+                        </StackPanel>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="text" Property="Foreground" Value="#de3957"/>
+                            <Setter TargetName="image" Property="Source" Value="/Img/favorites_sel.png"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="False">
+                            <Setter TargetName="text" Property="Foreground" Value="White"/>
+                            <Setter TargetName="image" Property="Source" Value="/Img/favorites_def.png"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="SettingsBtnStyle" TargetType="Button">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border" Background="{TemplateBinding Background}">
+                        <StackPanel Orientation="Horizontal">
+                            <Image x:Name="image" Source="Img/power.png" HorizontalAlignment="Center" VerticalAlignment="Center" Height="25"/>
+                            <TextBlock x:Name="text" Text="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" Margin="10 0 0 0"/>
+                        </StackPanel>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="text" Property="Foreground" Value="#de3957"/>
+                            <Setter TargetName="image" Property="Source" Value="/Img/settings_sel.png"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="False">
+                            <Setter TargetName="text" Property="Foreground" Value="White"/>
+                            <Setter TargetName="image" Property="Source" Value="/Img/settings_def.png"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>
